@@ -9,6 +9,28 @@ font-family: 'Merriweather', serif;
 html > body {
   background-color: rgba(237, 199, 143, 0.853);
 }
-#memeDepot {
-  background-color: blueviolet;
+body > #memeDepot {
+  background-color: rgb(184, 184, 184);
+  margin-top: 1rem;
+  text-align: center;
+}
+#meme {
+  width: 40%;
+  height: 40%;
+}
+#top {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
+}
+#bottom {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
 }

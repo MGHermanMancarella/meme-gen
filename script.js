@@ -1,12 +1,6 @@
 const myForm = document.querySelector('form');
-let newDiv = document.createElement('div');
-let newImg = document.createElement('img');
 
-let topText = document.getElementById('top');
-let bottomText = document.getElementById('bottom');
-let imgURL = document.getElementById('imageURL');
 let memeDepot = document.getElementById('memeDepot');
-let color = document.getElementById('color');
 
 function checkIfNull(val) {
   if (val === null) {
@@ -15,10 +9,27 @@ function checkIfNull(val) {
 }
 myForm?.addEventListener('submit', function (event) {
   event.preventDefault();
-  memeDepot?.appendChild(newDiv);
-  newDiv.classList.add('freshMeme');
-  newDiv.appendChild(newImg);
-  newImg.appendChild(newDiv);
-  newDiv.innerText = bottomText.value;
+
+  const imgURL = document.getElementById('imageURL');
+  // const color = document.getElementById('textColor');
+  const topText = document.getElementById('topText');
+  const bottomText = document.getElementById('bottomText');
+
+  const memeDiv = document.createElement('div');
+  const topDiv = document.createElement('div');
+  const bottomDiv = document.createElement('div');
+  const newImg = document.createElement('img');
+
+  memeDiv.setAttribute('id', 'meme');
+  topDiv.innerText = topText.value;
+  topDiv.setAttribute('id', 'top');
+  bottomDiv.innerText = bottomText.value;
+  bottomDiv.setAttribute('id', 'bottom');
+  newImg.src = imgURL.value;
+
+  // @ts-ignore
+  memeDiv.appendChild(newImg, topDiv, bottomDiv);
+
+  memeDepot.appendChild(memeDiv);
   myForm.reset();
 });

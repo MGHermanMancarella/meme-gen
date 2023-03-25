@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mikey's Marvelous Meme Maker</title>
+    <title>Mikey's Marvelous Meme Machine</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -20,35 +20,37 @@
     />
   </head>
   <body class="">
-    <header><h1 class="text-center">Mikey's Mediocre Meme Maker</h1></header>
+    <header><h1 class="text-center">Mikey's Mediocre Meme Machine</h1></header>
 
     <div id="formContainer" class="container">
-      <form action="submit">
+      <form>
         <div>
           <label for="imageURL">Image URL</label>
-          <input type="text" id="imageURL" />
+          <input type="text" id="imageURL" name="imageURL" />
           <div>
             <label for="topText">Top Text</label>
-            <input type="text" id="top" />
+            <input type="text" id="topText" name="topText" />
           </div>
           <div>
             <label for="bottomText">Bottom Text</label>
-            <input type="text" id="bottom" />
+            <input type="text" id="bottomText" name="bottomText" />
             <div>
-              <div id="color">
+              <!-- <div class="textColor">
                 <label>Text Color</label>
-                <label for="white">White</label>
-                <input type="radio" name="textColor" />
+                <label for="textColor">White</label>
+                <input id="white" type="radio" name="textColor" />
                 <label for="black">Black</label>
-                <input type="radio" name="textColor" />
-              </div>
-              <button type="button">Meme Me</button>
+                <input id="black" type="textColor" name="textColor" />
+              </div> -->
+              <button type="submit">Meme Me</button>
             </div>
           </div>
         </div>
       </form>
     </div>
-    <section class="container" id="memeDepot"></section>
+    <section class="container" id="memeDepot">
+      <h2>Meme Landing Zone</h2>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
