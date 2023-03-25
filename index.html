@@ -19,26 +19,36 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="">
     <header><h1 class="text-center">Mikey's Mediocre Meme Maker</h1></header>
 
-    <form action="submit">
-      <div>
-        <label for="imageURL">Image URL</label>
-        <input type="text" class="imageURL" />
+    <div id="formContainer" class="container">
+      <form action="submit">
         <div>
-          <label for="topText">Top Text</label>
-          <input type="text" class="top" />
-        </div>
-        <div>
-          <label for="bottomText">Bottom Text</label>
-          <input type="text" class="bottom" />
+          <label for="imageURL">Image URL</label>
+          <input type="text" id="imageURL" />
           <div>
-            <button type="button">Meme Me</button>
+            <label for="topText">Top Text</label>
+            <input type="text" id="top" />
+          </div>
+          <div>
+            <label for="bottomText">Bottom Text</label>
+            <input type="text" id="bottom" />
+            <div>
+              <div id="color">
+                <label>Text Color</label>
+                <label for="white">White</label>
+                <input type="radio" name="textColor" />
+                <label for="black">Black</label>
+                <input type="radio" name="textColor" />
+              </div>
+              <button type="button">Meme Me</button>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
+    <section class="container" id="memeDepot"></section>
     <script src="script.js"></script>
   </body>
 </html>

@@ -5,3 +5,10 @@ font-family: 'Fugaz One', cursive;
 font-family: 'Merriweather', serif;
 
 */
+
+html > body {
+  background-color: rgba(237, 199, 143, 0.853);
+}
+#memeDepot {
+  background-color: blueviolet;
+}
