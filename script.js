@@ -20,16 +20,17 @@ myForm?.addEventListener('submit', function (event) {
   const bottomDiv = document.createElement('div');
   const newImg = document.createElement('img');
 
-  memeDiv.setAttribute('id', 'meme');
+  memeDiv.setAttribute('class', 'meme container');
   topDiv.innerText = topText.value;
-  topDiv.setAttribute('id', 'top');
+  topDiv.setAttribute('class', 'top');
   bottomDiv.innerText = bottomText.value;
-  bottomDiv.setAttribute('id', 'bottom');
+  bottomDiv.setAttribute('class', 'bottom');
   newImg.src = imgURL.value;
+  console.log(memeDiv.getAttribute('class'));
 
-  // @ts-ignore
-  memeDiv.appendChild(newImg, topDiv, bottomDiv);
-
+  memeDiv.appendChild(newImg);
+  memeDiv.appendChild(topDiv);
+  memeDiv.appendChild(bottomDiv);
   memeDepot.appendChild(memeDiv);
   myForm.reset();
 });
