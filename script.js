@@ -1,5 +1,5 @@
 const myForm = document.querySelector('form');
-
+let memes = [];
 let memeDepot = document.getElementById('memeDepot');
 
 myForm?.addEventListener('submit', function (event) {
@@ -29,9 +29,10 @@ myForm?.addEventListener('submit', function (event) {
   newImg.src = imgURL.value;
   // console.log(memeDiv.getAttribute('class'));
   deleteButton.setAttribute('class', 'button');
-  const deleteIcon = document.createElement('img');
-  deleteIcon.src = 'remove.svg';
-  deleteButton.appendChild(deleteIcon);
+  deleteButton.innerText = 'Delete';
+  // const deleteIcon = document.createElement('img');
+  // deleteIcon.src = 'remove.svg';
+  // deleteButton.appendChild(deleteIcon);
 
   memeDiv.appendChild(newImg);
   memeDiv.appendChild(topDiv);
@@ -39,11 +40,16 @@ myForm?.addEventListener('submit', function (event) {
   memeDiv.appendChild(deleteButton);
   memeDepot.appendChild(memeDiv);
   myForm.reset();
-  const memes = document.querySelectorAll('button.button');
-});
-for (let meme of memes) {
-  meme.addEventListener('click', function (event) {
+  memes = document.querySelectorAll('.button');
+
+  deleteButton.addEventListener('click', function (event) {
     let GetOutaHere = event.target;
     GetOutaHere.parentNode.parentNode.removeChild(GetOutaHere.parentNode);
+    console.log(event.target);
   });
-}
+});
+// for (let i = 0; i < memes.length; i++) {
+//   memes[i].addEventListener('click', function (event) {
+
+//   });
+// }

@@ -10,19 +10,27 @@ html > body {
   background-color: rgba(237, 199, 143, 0.853);
 }
 body > section {
-  display: inline-block;
   background-color: rgb(184, 184, 184);
   margin-top: 1rem;
   text-align: center;
-  height: 90vh;
+  height: fit-content;
+  min-height: 20rem;
+  margin-bottom: 2rem;
 }
-section > h2 {
-  flex-basis: 100%;
-  justify-content: center;
+
+section.container {
+  /* display: flex; */
 }
+/* #memeDepot {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+} */
+
 .meme {
   position: relative;
   transform: scale(0.75);
+  max-width: 400px;
 }
 .top,
 .bottom {
@@ -47,7 +55,7 @@ section > h2 {
 } */
 @media screen and (max-width: 575px) {
   #memeDepot {
-    display: inline;
+    display: block;
   }
 }
 .button {
