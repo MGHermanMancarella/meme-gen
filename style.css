@@ -5,28 +5,46 @@ font-family: 'Fugaz One', cursive;
 font-family: 'Merriweather', serif;
 
 */
+html {
+  color: rgb(24, 24, 24);
+}
 
+header > h1 {
+  font-style: 'Fugaz One', cursive;
+  color: rgb(22, 22, 22);
+}
 html > body {
-  background-color: rgba(237, 199, 143, 0.853);
+  background-color: #3e4c5e;
 }
 body > section {
-  background-color: rgb(184, 184, 184);
+  background-color: #6a687a;
   margin-top: 1rem;
   text-align: center;
   height: fit-content;
   min-height: 20rem;
   margin-bottom: 2rem;
+  border-radius: 30px;
 }
-
-section.container {
+#formContainer {
+  color: black;
+}
+.input > label {
   /* display: flex; */
 }
-/* #memeDepot {
-  display: inline-flex;
+#imageURL,
+#topText,
+#bottomText {
+  min-width: 80%;
   justify-content: space-between;
-  flex-direction: column;
-} */
+  background-color: #84828f;
+}
 
+button {
+  border-radius: 10px;
+  background-color: #84828f;
+  font-size: large;
+  margin: 2px;
+}
 .meme {
   position: relative;
   transform: scale(0.75);
@@ -36,7 +54,7 @@ section.container {
 .bottom {
   position: absolute;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 3rem;
   left: 50%;
   width: 100%;
   color: white;
@@ -56,11 +74,12 @@ section.container {
 @media screen and (max-width: 575px) {
   #memeDepot {
     display: block;
+    border-radius: 7px;
   }
 }
 .button {
   position: absolute;
-  /* font-size: 40px; */
+  font-size: 40px;
   margin-left: 50%;
   transform: translate(-50%, -100%);
   display: none;
@@ -69,6 +88,7 @@ section.container {
 }
 .meme:hover .button {
   display: block;
+  background-color: #ca3c25;
 }
 img:hover {
   opacity: 0.5;

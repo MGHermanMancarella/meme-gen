@@ -13,12 +13,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,27 +26,27 @@
 
     <div id="formContainer" class="container">
       <form>
-        <div>
+        <div class="input">
           <label for="imageURL">Image URL</label>
           <input type="text" id="imageURL" name="imageURL" />
-          <div>
-            <label for="topText">Top Text</label>
-            <input type="text" id="topText" name="topText" />
-          </div>
-          <div>
-            <label for="bottomText">Bottom Text</label>
-            <input type="text" id="bottomText" name="bottomText" />
-            <div>
-              <!--   <div class="textColor">
+        </div>
+        <div class="input">
+          <label for="topText">Top Text</label>
+          <input type="text" id="topText" name="topText" />
+        </div>
+        <div class="input">
+          <label for="bottomText">Bottom Text</label>
+          <input type="text" id="bottomText" name="bottomText" />
+        </div>
+        <!--   <div class="textColor">
                 <label>Text Color</label>
                 <label for="textColor">White</label>
                 <input id="white" type="radio" name="textColor" />
                 <label for="black">Black</label>
                 <input id="black" type="radio" name="textColor" />
               </div> -->
-              <button type="submit">Meme Me</button>
-            </div>
-          </div>
+        <div>
+          <button type="submit">Meme Me</button>
         </div>
       </form>
     </div>
