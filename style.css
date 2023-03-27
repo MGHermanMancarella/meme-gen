@@ -12,6 +12,7 @@ html {
 header > h1 {
   font-family: 'Fugaz One', cursive;
   color: whitesmoke;
+  margin-top: 15px;
 }
 html > body {
   background-color: #0a2463;
